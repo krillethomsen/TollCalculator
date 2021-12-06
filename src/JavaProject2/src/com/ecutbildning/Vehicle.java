@@ -1,5 +1,8 @@
-package com.ecutbildning;
-
 public interface Vehicle {
-    int getFee();
+
+    public int getFee();
+    public int HowManyTimes();
+
+
+
 }

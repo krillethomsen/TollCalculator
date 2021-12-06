@@ -1,9 +1,9 @@
-public class Car implements Vehicle  {
+public class Motorbike implements Vehicle  {
     public boolean rushhour;
     public int howmany; 
 
     public int getFee() {
-        return 11;
+        return 8;
     }
 
     public int HowManyTimes() {
@@ -14,24 +14,24 @@ public class Car implements Vehicle  {
         return true;
     }
 
-    public Car (boolean rushhour, int howmany){
+    public Motorbike (boolean rushhour, int howmany){
         this.rushhour = rushhour;
         this.howmany = howmany;
 
     }
-
+ 
     public void PrintDetail() {
         
-        System.out.println("The fee for Car is " + getFee());
+        System.out.println("The fee for Motorbike is " + getFee());
         System.out.println("It passed "+ howmany + " times today.");
-      
+
         // it maybe should be specified with specific time. 
         if (rushhour == true){
             System.out.println("You passed under the rushhour, extra fee is charged");
-        } 
-        
+        }
         // it should be limited maximum 60kr  
         System.out.println("Total fee is : " + HowManyTimes()*getFee());
+
     }
 
 }
