@@ -1,37 +1,23 @@
 public class Car implements Vehicle  {
-    public boolean rushhour;
-    public int howmany; 
+    int[] IsItRushHour;
 
     public int getFee() {
         return 11;
     }
-
-    public int HowManyTimes() {
-        return howmany;
+    
+    public Car (int[] IsItRushHour){
+        this.IsItRushHour = IsItRushHour;
     }
-
-    public boolean rushhour() {
-        return true;
+    
+    public int[] GetArray(){
+        return this.IsItRushHour;
     }
-
-    public Car (boolean rushhour, int howmany){
-        this.rushhour = rushhour;
-        this.howmany = howmany;
-
-    }
-
+    
     public void PrintDetail() {
-        
-        System.out.println("The fee for Car is " + getFee());
-        System.out.println("It passed "+ howmany + " times today.");
-      
-        // it maybe should be specified with specific time. 
-        if (rushhour == true){
-            System.out.println("You passed under the rushhour, extra fee is charged");
-        } 
-        
-        // it should be limited maximum 60kr  
-        System.out.println("Total fee is : " + HowManyTimes()*getFee());
+
+        System.out.println("The fee for Car is " + getFee()+" kr for Normal time, 18kr for Rush Hour");
+        System.out.println("The maximum fee for one day is 60kr");
+        System.out.println("Your car passed the road "+ IsItRushHour.length + " time(s) today");
     }
 
 }

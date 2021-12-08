@@ -1,7 +1,9 @@
 public interface Vehicle {
 
     public int getFee();
-    public int HowManyTimes();
+    public void PrintDetail();
+    //public int[] GetArray();
+
 
 
 

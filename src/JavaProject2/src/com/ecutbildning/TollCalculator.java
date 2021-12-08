@@ -1,19 +1,57 @@
+
 public class TollCalculator {
 
-    public static void main(String[] args) {
-        
+        int[] IsItRushHour;
 
-        Car car1 = new Car(true, 2);
-        Car car2 = new Car(true, 5);
-        Car car3 = new Car(false, 1);
-        Motorbike motorbike1 = new Motorbike(true, 5);
-        Motorbike motorbike2 = new Motorbike(false, 10);
+        public TollCalculator(Car car) {
+           
+            this.IsItRushHour = new int[car.GetArray().length];
+            for (int o = 0; o < car.GetArray().length; o++) {
+                this.IsItRushHour[o] =car.GetArray()[o];
+            }  
+        }
 
-        car1.PrintDetail();
-        car2.PrintDetail();
-        car3.PrintDetail();
-        motorbike1.PrintDetail();
-        motorbike2.PrintDetail();
+        public TollCalculator(Motorbike Motorbike) {
+           
+            this.IsItRushHour = new int[Motorbike.GetArray().length];
+            for (int o = 0; o < Motorbike.GetArray().length; o++) {
+                this.IsItRushHour[o] =Motorbike.GetArray()[o];
+            }  
+        }
 
+        public int getTotalFee(int x){
+            int totalFee = 0;
+           
+            for (int i = 0; i < IsItRushHour.length; i++) {
+ 
+                if (IsItRushHour[i] >= 800 && IsItRushHour[i] <= 900) {
+                    totalFee += 18;
+                System.out.println("Rush Hour : 18kr");
+
+                } else if (IsItRushHour[i] >= 1600 && IsItRushHour[i] <= 1700) {
+                    totalFee += 18;
+                System.out.println("Rush Hour : 18kr");
+
+                } else {
+                    // x == 1 means it's car. 
+                    if (x == 1) {
+                    totalFee += 11;
+                    System.out.println("Normal Time : 11kr");
+                    } 
+
+                    // x == 2 means it's Motorbike. 
+                    if (x == 2) {
+                    totalFee += 8;
+                    System.out.println("Normal Time : 8kr");
+                    }
+                }
+
+                if (totalFee>60) {
+                    totalFee = 60; 
+                }
+            }
+            return totalFee;
+            
     }
+
 }
