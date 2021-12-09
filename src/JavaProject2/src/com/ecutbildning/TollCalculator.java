@@ -19,21 +19,13 @@ public class TollCalculator {
             return 0;
         else;
             int hour = Integer.valueOf(date.getHour());
-            switch (hour){
-                case 8:
-                case 16:
-                    return 18;
-                default:
-                    switch(vehicle){
-                        case "car":
-                            return 11;
-                        case "mc":
-                            return 8;
-                        default:
-                            return 0;
-                    }
-            }
-        return 0;
+            if(hour == 8)
+                return 18;
+            else if(hour == 16)
+                return 18;
+            else;
+                return vehicle.getFee();
+
     }
 
     private boolean isTollFreeDate(LocalDateTime date) {
