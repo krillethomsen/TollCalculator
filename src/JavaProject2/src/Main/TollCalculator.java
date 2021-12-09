@@ -1,4 +1,4 @@
-package com.ecutbildning;
+package Main;
 
 import java.time.LocalDateTime;
 

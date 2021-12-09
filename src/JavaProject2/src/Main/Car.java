@@ -1,4 +1,4 @@
-package com.ecutbildning;
+package Main;
 
 public class Car implements Vehicle {
     @Override
