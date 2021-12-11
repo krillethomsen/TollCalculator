@@ -1,0 +1,26 @@
+Planering:
+1. Skapa en tom template med namnet TollCalculator.
+2. Skapa ett interface Vehicle och klasserna Car och MotorBike.
+3. Car och Motorbike ska returnera en int med avgiften för tullpassering med ett sådant fordon.
+4. Värdet ska kunna returneras genom att kalla på .getFee()
+5. Skapa nu en instans av antingen klassen Car eller MotorBike.
+6. Använd LocalDateTime och gör en array innehållandes datum då fordonet passerar tullkameran.
+7. Arrayen samt vehicle (Car eller MotorBike) ska nu skickas in i TollCalculator där avgiften räknas ut.
+8. Skapa en metod (getTollFee) i TollCalculator som tar ett Vehicle samt datum arrayen som input.
+9. Initiera en variabel där den totala avgiften kommer sparas.
+10. Loopa igenom datumen i arrayen där varje datum sedan ska kontrolleras om det:
+    * Är en tullfri dag
+    * Är rusningstid med taxan 18kr för passering
+    * Är normaltaxa
+    Värdet som sedan returneras ska läggas in i variabeln för den totala avgiften.
+11. Skapa en ny metod som även den tar datum och vehicle som input, det är i denna ovan kriterier kontrolleras.
+12. Börja med att kontrollera om det är en tullfri dag.
+    Skapa en ny metod som tar datum som input och kontrollerar detta.
+    Metoden kan förslagsvis returnera true eller false.
+13. Gå nu tillbaka till föregående metod och skriv även en kontroll av om det är timmar med rusningstrafik.
+    Förslagsvis med en if eller switch sats.
+14. Om det varken är tullfri dag eller rusningstid ska normal taxa debiteras, gör det genom att kalla på den med .getFee
+15. Gå nu tillbaka till metoden getTollFee. Efter datumloopen måste det kontrolleras maxtaxa för vårt vehicle.
+    Gör det med en if-sats där villkoret om totala avgiften är högre än 60 så blir totala avgiften satt till 60kr.
+16. Avsluta med att skriva och köra tester,
+    med olika datum och både Car och MotorBike för att se så att returnerade värden är korrekta.
