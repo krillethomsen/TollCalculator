@@ -1,0 +1,24 @@
+Planering
+
+
+1. Make interface 'Vehicle'. It'll have contents that should Car/Motorbike have. 
+Even if there will be other type of Vehicles, from this interface, people can add any type of vechicles as much as they want. 
+The contents will be 'getFee' that has the specific fee depending on vichles. 
+and PrintDetail to print out and show the fee as a result. 
+
+2. Make TollCacluator which contains how to caculate the fee. 
+It'll get the fee information from car/motorbike files, but it'll also show how to caculate the fee with specific time. 
+Time will be sett with 4 numbers, but if it has 0 on the first place, it won't be need to be written. 
+Using for-loop, if the time as input is in 800~900 or 1600~1700, it will show the maximum fee which is 18kr because it's during rushhour. 
+Using 'if', get the information and fee if it's passed during rushhour and charge the fee. 
+Also, if it's not in rushhour, it has to calculate the regular fee. Using 'if' again inside of that, 
+charge the regular fee if it's not passed during rush hour. 
+
+3. If its fee is more than 60, the fee won't be charged more, so set this up too after 'number 2's process. 
+Return total fee.
+
+4.After these, test will be need on TollCalculatortester file. Make arrayers as input with random times, random length to test it.
+If it's car, use the car class, if it's motorbike, use the motorbike class. Then it will calculate the fee using TollCaculator, 
+and print the result using 'PrintDetail'. User can get the all information. The fee for each vehicles, for Rush hour, mamxium fee, 
+how many times it's passed the road. The total fee will be printed as the last. 
+
